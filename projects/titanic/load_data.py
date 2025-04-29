@@ -1,6 +1,6 @@
 import pandas as pd
 
-df = pd.read_csv('data/titanic.csv')
+df = pd.read_csv('projects/titanic/data/titanic.csv')
 
 # Drop columns we won't use
 df = df.drop(columns=['Name', 'Ticket', 'Cabin'])
@@ -19,5 +19,5 @@ print("\nData Types:")
 print(df.dtypes)
 
 # Save cleaned version
-df.to_csv('data/titanic_cleaned.csv', index=False)
+df.to_csv('projects/titanic/data/titanic_cleaned.csv', index=False)
 print("\nCleaned data saved to: data/titanic_cleaned.csv")
