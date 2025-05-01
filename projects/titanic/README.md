@@ -35,6 +35,7 @@ titanic-survival-ml/
 ├── load_data.py
 ├── train_model.py          # Logistic Regression model
 ├── train_random_forest.py  # Random Forest model
+├── train_rf_pruned.py      # Random Forest with pruned features
 ├── README.md
 ├── theory_notes/
 │   ├── day6_first_model_evaluation.md
@@ -51,28 +52,23 @@ titanic-survival-ml/
 - **Feature Engineering**: Handling missing values, encoding categorical variables
 - **Explainability**: Analyzing feature importances in Random Forest
 - **Production Thinking**: Architecting ML systems for real-world applications
+- **Performed **feature importance analysis** and retrained model with a reduced set of features for improved generalization
 
 ---
 
 ## 📈 Results
 
-| Model | Accuracy | Precision | Recall | F1 Score |
-|------|----------|-----------|---------|----------|
-| Logistic Regression | ~78% | ~73% | ~66% | ~69% |
-| Random Forest | ~81% | ~76% | ~72% | ~74% |
+| Model                  | Accuracy | Precision | Recall | F1 Score |
+|------------------------|----------|-----------|--------|----------|
+| Logistic Regression     | ~78%     | ~73%      | ~66%   | ~69%     |
+| Random Forest (Full)    | ~81%     | ~76%      | ~72%   | ~74%     |
+| Random Forest (Pruned)  | ~80%     | ~75%      | ~71%   | ~73%     |
 
-(Note: Numbers may vary slightly depending on random train/test split.)
 
----
-
-## 🚀 Next Steps
-
-- Hyperparameter tuning (Grid Search / Random Search)
-- Cross-validation for robust evaluation
-- Model deployment with Flask or Streamlit (later stages)
-- Build end-to-end MLOps pipeline
+##Note: The pruned model uses fewer features and offers nearly the same performance with improved simplicity and lower risk of overfitting.*
 
 ---
+
 
 ## 👤 About Me
 
