@@ -4,27 +4,25 @@
 
 ## 🎯 Project Overview
 
-This project applies machine learning techniques to predict passenger survival on the Titanic dataset.
+This project explores machine learning techniques to predict passenger survival using the Titanic dataset.  
+It focuses on model training, feature importance, model evaluation beyond accuracy, and improving generalization.
 
-We use basic data preprocessing, feature engineering, and two classification models:
+Key models implemented:
 - Logistic Regression
-- Random Forest Classifier
-
-The goal is to explore model evaluation metrics beyond accuracy and understand the trade-offs between precision, recall, and F1 score.
+- Random Forest (Full features)
+- Random Forest (Pruned features)
+- Random Forest with K-Fold Cross-Validation
 
 ---
 
 ## 🧰 Technologies and Libraries
 
 - Python 3.x
-- Pandas
-- NumPy
+- Pandas, NumPy
 - Scikit-learn
-- Matplotlib (for visualization later)
+- Matplotlib (later stages)
 
 ---
-
-## 🛠 Project Structure
 
 ## 🛠 Project Structure
 
@@ -33,46 +31,119 @@ titanic-survival-ml/
 ├── data/
 │   └── titanic_cleaned.csv
 ├── load_data.py
-├── train_model.py          # Logistic Regression model
-├── train_random_forest.py  # Random Forest model
-├── train_rf_pruned.py      # Random Forest with pruned features
+├── train_model.py                 # Logistic Regression
+├── train_random_forest.py        # Random Forest (full features)
+├── train_rf_pruned.py            # Random Forest with fewer features
+├── cross_validate_rf.py          # Random Forest with 5-Fold CV
 ├── README.md
 ├── theory_notes/
 │   ├── day6_first_model_evaluation.md
-│   └── day8_decision_trees_random_forests.md
+│   ├── day8_decision_trees_random_forests.md
+│   └── day10_cross_validation_generalization.md
 └── product_thinking/
-    └── fraud_system_architecture.md
+    ├── fraud_system_architecture.md
+    └── lead_scoring_use_case.md
+
+
+
+Absolutely — here’s your updated README.md content for the Titanic project after completing Day 10.
+
+This version includes:
+
+K-Fold Cross-Validation
+
+Model performance comparison
+
+Signal pruning
+
+Portfolio polish-level presentation
+
+📁 File Path:
+bash
+Copy
+Edit
+ml_product_leader_2025/projects/titanic/README.md
+📄 Full Updated README.md Content:
+markdown
+Copy
+Edit
+# Titanic Survival Prediction – Machine Learning Project
 
 ---
 
-## 🧠 Key Learnings
+## 🎯 Project Overview
 
-- **Model Evaluation**: Using Accuracy, Precision, Recall, and F1 Score to assess models properly
-- **Bias-Variance Tradeoff**: Handling underfitting and overfitting
-- **Feature Engineering**: Handling missing values, encoding categorical variables
-- **Explainability**: Analyzing feature importances in Random Forest
-- **Production Thinking**: Architecting ML systems for real-world applications
-- **Performed **feature importance analysis** and retrained model with a reduced set of features for improved generalization
+This project explores machine learning techniques to predict passenger survival using the Titanic dataset.  
+It focuses on model training, feature importance, model evaluation beyond accuracy, and improving generalization.
+
+Key models implemented:
+- Logistic Regression
+- Random Forest (Full features)
+- Random Forest (Pruned features)
+- Random Forest with K-Fold Cross-Validation
+
+---
+
+## 🧰 Technologies and Libraries
+
+- Python 3.x
+- Pandas, NumPy
+- Scikit-learn
+- Matplotlib (later stages)
+
+---
+
+## 🛠 Project Structure
+
+```bash
+titanic-survival-ml/
+├── data/
+│   └── titanic_cleaned.csv
+├── load_data.py
+├── train_model.py                 # Logistic Regression
+├── train_random_forest.py        # Random Forest (full features)
+├── train_rf_pruned.py            # Random Forest with fewer features
+├── cross_validate_rf.py          # Random Forest with 5-Fold CV
+├── README.md
+├── theory_notes/
+│   ├── day6_first_model_evaluation.md
+│   ├── day8_decision_trees_random_forests.md
+│   └── day10_cross_validation_generalization.md
+└── product_thinking/
+    ├── fraud_system_architecture.md
+    └── lead_scoring_use_case.md
+
+
+
 
 ---
 
 ## 📈 Results
 
-| Model                  | Accuracy | Precision | Recall | F1 Score |
-|------------------------|----------|-----------|--------|----------|
+| Model                   | Accuracy | Precision | Recall | F1 Score |
+|-------------------------|----------|-----------|--------|----------|
 | Logistic Regression     | ~78%     | ~73%      | ~66%   | ~69%     |
 | Random Forest (Full)    | ~81%     | ~76%      | ~72%   | ~74%     |
 | Random Forest (Pruned)  | ~80%     | ~75%      | ~71%   | ~73%     |
+| Random Forest (5-Fold CV Avg) | ~79–81% | ~74–77% | ~70–73% | ~72–75% |
 
+*Note: Numbers may vary slightly due to data splits.*
 
-##Note: The pruned model uses fewer features and offers nearly the same performance with improved simplicity and lower risk of overfitting.*
+---
+
+## 🧠 Key Learnings
+
+- ML metrics beyond accuracy: **Precision, Recall, F1 Score, AUC**
+- Signal pruning and feature selection using **feature importances**
+- Model generalization via **K-Fold Cross-Validation**
+- Aligning model behavior with product goals (e.g., survival prediction = recall-sensitive)
+- Product thinking applied to ML: **fraud detection, lead scoring**
 
 ---
 
+## 🧪 Advanced Evaluation Techniques
 
-## 👤 About Me
+This project uses **5-Fold Cross-Validation** to validate generalization and avoid overfitting to a single test split.
 
-Machine Learning Product Leader building a public portfolio step-by-step. Working with Bain.  
-Focused on combining **technical fluency**, **system design**, and **product leadership** to drive real-world ML impact.
 
----
+
