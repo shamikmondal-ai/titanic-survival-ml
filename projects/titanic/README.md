@@ -128,6 +128,11 @@ titanic-survival-ml/
 | Random Forest (5-Fold CV Avg) | ~79–81% | ~74–77% | ~70–73% | ~72–75% |
 
 *Note: Numbers may vary slightly due to data splits.*
+### Precision-Recall Curve
+
+![PR Curve](projects/titanic/pr_curve.png)
+
+Shows trade-off between recall and precision as threshold varies. Ideal threshold chosen: ~0.52.
 
 ---
 

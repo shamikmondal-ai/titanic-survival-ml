@@ -29,4 +29,12 @@ plt.ylabel("Precision")
 plt.title("Precision-Recall Curve – Titanic Random Forest")
 plt.legend()
 plt.grid()
-plt.show()
+##plt.show()
+
+plt.savefig('projects/titanic/pr_curve.png', dpi=300)
+print("PR curve saved to projects/titanic/pr_curve.png")
+
+
+for p, r, t in zip(precision, recall, thresholds):
+    if p >= 0.70 and r >= 0.70:
+        print(f"Threshold: {t:.2f} → Precision: {p:.2f}, Recall: {r:.2f}")
